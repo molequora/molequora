@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Molequora | Exploring the Chemistry of Life</title>
+
+<style>
+
+/* ==============================
+   BASIC
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eaf6ff;
+    color: #222;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================ */
+
+nav {
+    background: #12355b;
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin: 5px 8px;
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+nav a:hover {
+    background: #176b87;
+}
+
+.learning-link {
+    background: #eaf6ff;
+    color: #12355b !important;
+
+    font-weight: bold;
+
+    border-radius: 20px;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff6ff,
+            #ffffff
+        );
+}
+
+.hero-text {
+    max-width: 850px;
+}
+
+.small-title {
+    color: #176b87;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+}
+
+.hero h1 {
+    color: #12355b;
+
+    font-size: 64px;
+
+    margin: 15px 0;
+
+    letter-spacing: 3px;
+}
+
+.tagline {
+    color: #176b87;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   GENERAL
+================================ */
+
+section {
+    padding: 70px 25px;
+
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: #176b87;
+
+    text-align: center;
+
+    font-size: 36px;
+}
+
+h3 {
+    color: #12355b;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   BUTTON
+================================ */
+
+.button {
+    display: inline-block;
+
+    background: #12355b;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #176b87;
+}
+
+
+/* ==============================
+   TOPICS
+================================ */
+
+#biochemistry {
+    text-align: center;
+
+    background: #f5fbff;
+}
+
+.intro {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+    font-size: 18px;
+}
+
+.topics {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h3 {
+    font-size: 21px;
+}
+
+.card p {
+    font-size: 15px;
+
+    color: #555;
+}
+
+
+/* ==============================
+   MOLECULAR BIOLOGY
+================================ */
+
+#molecular {
+    background:
+        linear-gradient(
+            135deg,
+            #eefaff,
+            #ffffff
+        );
+
+    text-align: center;
+}
+
+.molecular-header {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.dna-icon {
+    font-size: 60px;
+}
+
+.molecular-header h2 {
+    color: #12355b;
+
+    font-size: 43px;
+
+    margin: 10px 0;
+}
+
+.molecular-header p {
+    color: #526777;
+
+    font-size: 18px;
+}
+
+
+/* ==============================
+   SUBUNITS
+================================ */
+
+.subunits {
+    max-width: 1150px;
+
+    margin: 50px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.subunit {
+    background: white;
+
+    padding: 28px;
+
+    min-height: 260px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    border: 1px solid #dceff7;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.subunit:hover {
+    transform: translateY(-7px);
+}
+
+.number {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #12355b;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.subunit h3 {
+    color: #176b87;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+}
+
+.subunit p {
+    color: #52606b;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   CENTRAL DOGMA
+================================ */
+
+.central-dogma {
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #12355b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.central-dogma h3 {
+    color: white;
+
+    font-size: 25px;
+}
+
+.flow {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   OTHER TOPICS
+================================ */
+
+.simple-section {
+    text-align: center;
+
+    background: #f5fbff;
+}
+
+.simple-content {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 18px;
+}
+
+
+/* ==============================
+   LEARNING HUB
+================================ */
+
+#learning {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff6ff,
+            #ffffff
+        );
+}
+
+.learning-title {
+    color: #12355b;
+
+    font-size: 43px;
+}
+
+.learning-subtitle {
+    color: #176b87;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.learning-cards {
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.learning-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* ==============================
+   RESOURCES
+================================ */
+
+#resources {
+    text-align: center;
+
+    background: white;
+}
+
+.content-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 18px;
+}
+
+
+/* ==============================
+   ABOUT
+================================ */
+
+#about {
+    text-align: center;
+
+    background: #f5fbff;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    background: #12355b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .topics,
+    .subunits {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .learning-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==============================
+   PHONE
+================================ */
+
+@media (max-width: 600px) {
+
+    nav a {
+        font-size: 13px;
+
+        margin: 3px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .tagline {
+        font-size: 19px;
+    }
+
+    .topics,
+    .subunits,
+    .learning-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .molecular-header h2 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVIGATION
+================================ -->
+
+<nav>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#biochemistry">
+Topics
+</a>
+
+<a href="#resources">
+Resources
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#learning" class="learning-link">
+🧠 Learning Hub
+</a>
+
+</nav>
+
+
+<!-- ==============================
+     HOME
+================================ -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<p class="small-title">
+WELCOME TO
+</p>
+
+<h1>
+MOLEQUORA 🧬
+</h1>
+
+<p class="tagline">
+Exploring the Chemistry of Life 🔬
+</p>
+
+<p class="hero-description">
+Discover the molecules, reactions, pathways,
+and processes that make life possible.
+</p>
+
+<a href="#biochemistry" class="button">
+Explore Biochemistry
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     TOPICS
+================================ -->
+
+<section id="biochemistry">
+
+<h2>
+🧪 Explore Biochemistry
+</h2>
+
+<p class="intro">
+Explore the fascinating molecular world behind life —
+from genetic information and biomolecules to enzymes,
+metabolism, biotechnology, and clinical science.
+</p>
+
+
+<div class="topics">
+
+
+<div class="card">
+
+<h3>
+🧬 Molecular Biology & Genetics
+</h3>
+
+<p>
+Explore DNA, RNA, genes, genomes,
+and genetic regulation.
+</p>
+
+<a href="#molecular" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🧫 Biomolecules & Structural Biology
+</h3>
+
+<p>
+Discover proteins, carbohydrates,
+lipids, and nucleic acids.
+</p>
+
+<a href="#biomolecules" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🧪 Enzymes & Biocatalysis
+</h3>
+
+<p>
+Discover how enzymes control
+biochemical reactions.
+</p>
+
+<a href="#enzymes" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+⚡ Metabolism & Bioenergetics
+</h3>
+
+<p>
+Explore metabolic pathways and
+cellular energy.
+</p>
+
+<a href="#metabolism" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🔬 Cell Biochemistry & Signaling
+</h3>
+
+<p>
+Learn how cells communicate
+through molecular signals.
+</p>
+
+<a href="#cell" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🩺 Clinical & Applied Biochemistry
+</h3>
+
+<p>
+Discover the role of biochemistry
+in medicine and diagnostics.
+</p>
+
+<a href="#clinical" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🧬 Biotechnology & Genetic Engineering
+</h3>
+
+<p>
+Explore genetic engineering
+and biotechnology.
+</p>
+
+<a href="#biotechnology" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🦠 Microbial & Viral Biochemistry
+</h3>
+
+<p>
+Explore microorganisms and viruses
+at the molecular level.
+</p>
+
+<a href="#microbial" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🌿 Environmental & Chemical Biology
+</h3>
+
+<p>
+Explore interactions between
+chemicals, organisms, and environments.
+</p>
+
+<a href="#environmental" class="button">
+Explore
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🔬 Biochemistry Techniques
+</h3>
+
+<p>
+Learn about techniques used
+to study biological molecules.
+</p>
+
+<a href="#techniques" class="button">
+Explore
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     MOLECULAR BIOLOGY & GENETICS
+================================================== -->
+
+<section id="molecular">
+
+
+<div class="molecular-header">
+
+<div class="dna-icon">
+🧬
+</div>
+
+<h2>
+Molecular Biology & Genetics
+</h2>
+
+<p>
+<strong>
+The molecular language of life.
+</strong>
+</p>
+
+<p>
+Explore how genetic information is stored,
+copied, expressed, regulated, repaired,
+and passed between cells and generations.
+</p>
+
+</div>
+
+
+<!-- ==============================
+     ALL 12 SUBUNITS
+================================ -->
+
+
+<div class="subunits">
+
+
+<!-- 01 -->
+
+<div class="subunit">
+
+<span class="number">
+01
+</span>
+
+<h3>
+Molecular Biology
+</h3>
+
+<p>
+Explore life at the molecular level and
+how DNA, RNA, proteins and other molecules
+work together inside cells.
+</p>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="subunit">
+
+<span class="number">
+02
+</span>
+
+<h3>
+Molecular Genetics
+</h3>
+
+<p>
+Discover how genes carry biological
+information and influence living organisms.
+</p>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="subunit">
+
+<span class="number">
+03
+</span>
+
+<h3>
+DNA & RNA
+</h3>
+
+<p>
+Learn about the structure, chemistry,
+and functions of DNA and RNA.
+</p>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="subunit">
+
+<span class="number">
+04
+</span>
+
+<h3>
+Chromosomes & Genome Organization
+</h3>
+
+<p>
+Discover how DNA is packaged and organized
+into chromosomes and genomes.
+</p>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="subunit">
+
+<span class="number">
+05
+</span>
+
+<h3>
+DNA Replication
+</h3>
+
+<p>
+Explore how DNA makes an accurate copy
+of itself before cell division.
+</p>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="subunit">
+
+<span class="number">
+06
+</span>
+
+<h3>
+DNA Repair & Recombination
+</h3>
+
+<p>
+Learn how cells repair damaged DNA and
+how recombination contributes to variation.
+</p>
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="subunit">
+
+<span class="number">
+07
+</span>
+
+<h3>
+Transcription
+</h3>
+
+<p>
+Discover how information stored in DNA
+is copied into RNA.
+</p>
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="subunit">
+
+<span class="number">
+08
+</span>
+
+<h3>
+RNA Processing & Regulation
+</h3>
+
+<p>
+Explore how RNA molecules are processed,
+modified, and regulated.
+</p>
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="subunit">
+
+<span class="number">
+09
+</span>
+
+<h3>
+Translation & Protein Synthesis
+</h3>
+
+<p>
+Learn how ribosomes read RNA instructions
+and build proteins.
+</p>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="subunit">
+
+<span class="number">
+10
+</span>
+
+<h3>
+Gene Expression & Regulation
+</h3>
+
+<p>
+Discover how cells control which genes
+are active and when they are expressed.
+</p>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="subunit">
+
+<span class="number">
+11
+</span>
+
+<h3>
+Mutations & Genetic Variation
+</h3>
+
+<p>
+Explore changes in DNA and how genetic
+variation arises.
+</p>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="subunit">
+
+<span class="number">
+12
+</span>
+
+<h3>
+Genomics & Epigenetics
+</h3>
+
+<p>
+Explore complete genomes and learn how
+epigenetic mechanisms affect gene activity.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- CENTRAL DOGMA -->
+
+<div class="central-dogma">
+
+<h3>
+🧬 The Flow of Genetic Information
+</h3>
+
+<p>
+DNA → RNA → Protein
+</p>
+
+</div>
+
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+
+</section>
+
+
+<!-- ==============================
+     OTHER TOPICS
+================================ -->
+
+<section id="biomolecules" class="simple-section">
+
+<h2>
+🧫 Biomolecules & Structural Biology
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore proteins, carbohydrates, lipids,
+nucleic acids, amino acids, and molecular structure.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="enzymes" class="simple-section">
+
+<h2>
+🧪 Enzymes & Biocatalysis
+</h2>
+
+<div class="simple-content">
+
+<p>
+Discover how enzymes act as biological catalysts
+and control biochemical reactions.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="metabolism" class="simple-section">
+
+<h2>
+⚡ Metabolism & Bioenergetics
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore metabolic pathways and how cells
+transform nutrients into usable energy.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="cell" class="simple-section">
+
+<h2>
+🔬 Cell Biochemistry & Signaling
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore molecular signals and biochemical
+pathways that allow cells to communicate.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="clinical" class="simple-section">
+
+<h2>
+🩺 Clinical & Applied Biochemistry
+</h2>
+
+<div class="simple-content">
+
+<p>
+Discover how biochemical principles are
+applied to medicine and diagnostics.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="biotechnology" class="simple-section">
+
+<h2>
+🧬 Biotechnology & Genetic Engineering
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore genetic engineering, DNA technology,
+and biological applications.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="microbial" class="simple-section">
+
+<h2>
+🦠 Microbial & Viral Biochemistry
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore microorganisms and viruses
+at the molecular level.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="environmental" class="simple-section">
+
+<h2>
+🌿 Environmental & Chemical Biology
+</h2>
+
+<div class="simple-content">
+
+<p>
+Explore interactions between molecules,
+organisms, chemicals, and environments.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<section id="techniques" class="simple-section">
+
+<h2>
+🔬 Biochemistry Techniques
+</h2>
+
+<div class="simple-content">
+
+<p>
+Learn about laboratory techniques used
+to investigate biological molecules.
+</p>
+
+</div>
+
+<a href="#biochemistry" class="button">
+← Back to Topics
+</a>
+
+</section>
+
+
+<!-- ==============================
+     LEARNING HUB
+================================ -->
+
+<section id="learning">
+
+<h2 class="learning-title">
+🧠 Learning Hub
+</h2>
+
+<p class="learning-subtitle">
+Learn. Practice. Explore. Understand.
+</p>
+
+<p>
+A dedicated space for turning curiosity
+into understanding.
+</p>
+
+
+<div class="learning-cards">
+
+
+<div class="learning-card">
+
+<h3>
+📖 Study Guides
+</h3>
+
+<p>
+Clear explanations and organized notes
+for important biochemistry concepts.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+<div class="learning-card">
+
+<h3>
+🧠 Quizzes
+</h3>
+
+<p>
+Test your understanding with
+biochemistry questions.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+<div class="learning-card">
+
+<h3>
+🗂️ Flashcards
+</h3>
+
+<p>
+Review important molecules,
+definitions, and concepts.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+<div class="learning-card">
+
+<h3>
+🔬 Visual Learning
+</h3>
+
+<p>
+Understand difficult concepts through
+diagrams and visual explanations.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+<div class="learning-card">
+
+<h3>
+📝 Revision
+</h3>
+
+<p>
+Quickly review important concepts
+and key facts.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+<div class="learning-card">
+
+<h3>
+🔎 Explore
+</h3>
+
+<p>
+Discover interesting questions and
+connections across biochemistry.
+</p>
+
+<a href="#" class="button">
+Coming Soon
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     RESOURCES
+================================ -->
+
+<section id="resources">
+
+<h2>
+📚 Resources
+</h2>
+
+<div class="content-box">
+
+<p>
+Explore reliable educational resources about
+biology, chemistry, molecular biology,
+and biochemistry.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT
+================================ -->
+
+<section id="about">
+
+<h2>
+👩‍🔬 About Molequora
+</h2>
+
+<div class="content-box">
+
+<p>
+Molequora is a student-led science education
+project exploring the fascinating chemistry
+behind life.
+</p>
+
+<p>
+Our goal is to make biochemistry easier,
+clearer, and more interesting to learn by
+connecting complex molecular concepts with
+simple explanations and visual learning.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+<p>
+Molequora 🧬
+</p>
+
+<p>
+Exploring the Chemistry of Life 🔬
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
